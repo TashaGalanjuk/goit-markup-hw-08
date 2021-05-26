@@ -1,0 +1,37 @@
+.section-title {
+  margin-bottom: 50px;
+
+  color: var(--title-text-color);
+  font-family: var(--title-font);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.feature__title {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-family: var(--title-font);
+  font-weight: 700;
+  line-height: 1.14;
+  color: var(--title-text-color);
+}
+
+.our-directions__title {
+  font-family: var(--title-font);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--white-text-color);
+}
+
+.footer-title {
+  font-family: var(--title-font);
+  font-weight: 700;
+  line-height: 1.17;
+  color: var(--white-text-color);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}

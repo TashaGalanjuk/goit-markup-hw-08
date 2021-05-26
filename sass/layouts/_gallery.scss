@@ -1,0 +1,118 @@
+.gallery {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.gallery-nav {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 50px;
+}
+
+.gallery-nav__item {
+  width: auto;
+}
+
+.gallery-nav__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.gallery-progect {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.gallery-project__title {
+  font-family: var(--title-font);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--title-text-color);
+}
+
+.gallery-progect__link {
+  display: flex;
+  flex-direction: column;
+
+  transition: box-shadow var(--animation);
+}
+
+.gallery-progect__item {
+  flex-basis: calc((100% - 3 * 30px) / 3);
+}
+
+.gallery-progect__item {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.gallery-project__about {
+  flex-grow: 1;
+  padding: 20px 24px;
+}
+
+.gallery-project__text {
+  font-family: var(--title-font);
+  font-size: 16px;
+  line-height: 1.87;
+}
+
+.gallery-project__about {
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+
+.gallery-progect__link:hover,
+.gallery-progect__link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.gallery-progect__link:hover .gallery-progect__text {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.gallery-progect__link:focus .gallery-progect__text {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.gallery-project__thumb {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  background-color: #2195f36c;
+
+  overflow: hidden;
+}
+
+.gallery-progect__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: translateY(100%);
+
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  font-family: var(--title-font);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  padding: 63px 24px;
+  color: var(--white-text-color);
+  background: rgba(33, 150, 243, 0.9);
+
+  transition: transform var(--animation), opacity var(--animation);
+}
