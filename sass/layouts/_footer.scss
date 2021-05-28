@@ -5,12 +5,40 @@
 }
 
 .footer__container {
-  display: flex;
-  align-items: baseline;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+  }
 }
 
 .footer-box {
-  margin-right: 70px;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 70px;
+    margin-bottom: 60px;
+  }
+}
+
+.footer-title {
+  font-family: var(--title-font);
+  font-weight: 700;
+  line-height: 1.17;
+  color: var(--white-text-color);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .footer-address {
@@ -47,11 +75,15 @@
 }
 
 .footer-icons__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+
+  // width: 44px;
+  // height: 44px;
+
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
 
@@ -77,9 +109,9 @@
   fill: var(--white-text-color);
 }
 
-.footer-subscription {
-  display: flex;
-}
+// .footer-subscription {
+//   display: flex;
+// }
 
 .footer-subscription input {
   padding: 15px, 16px;
@@ -90,13 +122,14 @@
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-form-field {
-  margin-right: 12px;
-}
+// .footer-form-field {
+//   margin-right: 12px;
+// }
 
 .footer-form-field input {
   padding: 11px 12px;
-  width: 358px;
+  width: 100%;
+  // width: 358px;
   height: 50px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -104,11 +137,15 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background: var(--dark-bg-color);
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 20px;
+  }
 }
 
 .label {
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
   margin-bottom: 30px;
 }
 
@@ -118,4 +155,23 @@
   fill: var(--white-bg-color);
 
   margin-left: 10px;
+}
+.button-subscription {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 22px;
+  border: 0;
+  border-radius: 4px;
+  color: var(--white-text-color);
+  background-color: var(--accent-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  font-family: var(--title-font);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
 }
