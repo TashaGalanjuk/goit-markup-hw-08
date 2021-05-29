@@ -15,9 +15,7 @@
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  width: 696px;
   height: 120px;
-
   color: var(--white-text-color);
   font-family: var(--title-font);
   font-weight: 900;
@@ -26,6 +24,23 @@
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1199px) {
+    font-size: 26px;
+    line-height: 1.62;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 360px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 696px;
+  }
 }
 
 .hero__button {

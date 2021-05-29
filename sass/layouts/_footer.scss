@@ -11,6 +11,11 @@
     justify-content: center;
     align-items: baseline;
   }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: nowrap;
+  }
 }
 
 .footer-box {
@@ -27,6 +32,8 @@
     margin-bottom: 60px;
   }
 }
+// .footer-box1 {
+// }
 
 .footer-title {
   font-family: var(--title-font);
@@ -37,6 +44,10 @@
   margin-bottom: 20px;
 
   @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
     text-align: center;
   }
 }
@@ -75,19 +86,24 @@
 }
 
 .footer-icons__link {
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-
-  // width: 44px;
-  // height: 44px;
-
-  width: 100%;
-  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
 
   transition: background-color var(--animation);
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+  }
 }
 
 .footer-icons__link:hover .social-icons__svg,
@@ -109,27 +125,24 @@
   fill: var(--white-text-color);
 }
 
-// .footer-subscription {
-//   display: flex;
-// }
+.footer-subscription {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
 
 .footer-subscription input {
   padding: 15px, 16px;
   font-family: var(--title-font);
   font-size: 16px;
   line-height: 1.25;
-
   color: rgba(255, 255, 255, 0.6);
 }
-
-// .footer-form-field {
-//   margin-right: 12px;
-// }
 
 .footer-form-field input {
   padding: 11px 12px;
   width: 100%;
-  // width: 358px;
+
   height: 50px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -141,11 +154,21 @@
   @media screen and (max-width: 767px) {
     margin-bottom: 20px;
   }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 12px;
+    width: 358px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+    margin-bottom: 20px;
+  }
 }
 
 .label {
-  // display: flex;
-  // align-items: center;
+  display: flex;
+  align-items: center;
   margin-bottom: 30px;
 }
 
@@ -158,8 +181,6 @@
 }
 .button-subscription {
   display: flex;
-  text-align: center;
-  justify-content: center;
   align-items: center;
 
   padding: 10px 22px;
@@ -174,4 +195,5 @@
   line-height: 1.87;
   letter-spacing: 0.06em;
   cursor: pointer;
+  margin: 0 auto;
 }
