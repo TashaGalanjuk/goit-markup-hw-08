@@ -200,14 +200,21 @@ ul {
   background-color: var(--white-bg-color);
 }
 
+@media screen and (max-width: 767px) {
+  .modal {
+    width: 450px;
+  }
+}
+
 .modal__title {
+  display: flex;
+  text-align: center;
   font-family: var(--title-font);
   font-weight: 700;
   font-size: 20px;
   line-height: 23px;
   color: var(--title-text-color);
   margin-bottom: 12px;
-  text-align: center;
 }
 
 .modal__button:hover .modal__icon-close,
@@ -1005,6 +1012,12 @@ ul {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .label {
+    display: block;
+  }
 }
 
 .footer-icon-send {
