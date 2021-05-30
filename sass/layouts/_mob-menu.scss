@@ -1,3 +1,9 @@
+.mob-menu.is-open {
+  opacity: 1;
+  display: block;
+  top: 0;
+}
+
 .header-nav-mob {
   display: flex;
   justify-content: space-between;
@@ -21,10 +27,12 @@
 
 .mob-button {
   display: inline-flex;
+  align-items: center;
   margin: 0;
   padding: 0;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .mob-button .icon-mob-close {
@@ -32,24 +40,29 @@
 }
 
 .mob-menu {
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  display: none;
+  top: 0;
   left: 0;
+  opacity: 0;
   width: 100%;
+  height: 100vh;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  background-color: var(--alt-title-cl);
+  transition: 0.5s;
+  z-index: 10;
+
+  background: red;
 }
 
-.mob-menu.is-open .icon-mob-close {
-  display: none;
-}
+// .mob-menu.is-open .icon-mob-close {
+//   display: none;
+// }
 
-.mob-menu.is-open .icon-mob-menu {
-  display: none;
-}
-
-.mob-menu.is-open {
-  opacity: 1;
-  display: block;
-}
+// .mob-menu.is-open .icon-mob-menu {
+//   display: none;
+// }
 
 .mob-menu__list {
   margin-top: 48px;
