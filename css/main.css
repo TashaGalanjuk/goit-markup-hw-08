@@ -21,7 +21,6 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  outline: 1px solid red;
 }
 
 body {
@@ -109,14 +108,12 @@ ul {
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
-    background: green;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
-    background: yellow;
   }
 }
 
@@ -404,16 +401,12 @@ ul {
 }
 
 .header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
   border-bottom: 1px solid #ececec;
   background-color: var(--white-bg-color);
-}
-
-@media screen and (min-width: 768px) {
-  .header__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1257,6 +1250,10 @@ ul {
   }
 }
 
+.body.modal-open {
+  overflow: hidden;
+}
+
 .mob-menu.is-open {
   opacity: 1;
   display: block;
@@ -1281,7 +1278,7 @@ ul {
     height: 100vh;
     font-weight: 500;
     letter-spacing: 0.02em;
-    background-color: var(--alt-title-cl);
+    background-color: var(--white-bg-color);
     transition: 0.5s;
     z-index: 10;
   }
@@ -1292,29 +1289,52 @@ ul {
   align-items: center;
   margin: 0;
   padding: 0;
+  width: 40px;
+  height: 40px;
   border: none;
   background-color: transparent;
   cursor: pointer;
+  z-index: 100;
+}
+
+@media screen and (min-width: 768px) {
+  .mob-button {
+    display: none;
+  }
+}
+
+.mob-button.is-open {
+  position: absolute;
+  z-index: 100;
+  right: 15px;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.mob-button.is-open .icon-mob-menu {
+  display: none;
 }
 
 .mob-button .icon-mob-close {
   display: none;
 }
 
+.mob-button.is-open .icon-mob-close {
+  display: block;
+}
+
 .mob-menu {
-  position: fixed;
-  display: none;
-  top: 0;
+  position: absolute;
+  top: 100%;
   left: 0;
   opacity: 0;
   width: 100%;
   height: 100vh;
   font-weight: 500;
   letter-spacing: 0.02em;
-  background-color: var(--alt-title-cl);
+  background-color: var(--white-bg-color);
   transition: 0.5s;
   z-index: 10;
-  background: red;
 }
 
 .mob-menu__list {
@@ -1353,6 +1373,10 @@ ul {
   line-height: 1.17;
   color: var(--main-text-cl);
   margin-bottom: 64px;
+}
+
+.mob-menu__current {
+  color: var(--accent-text-color);
 }
 
 /*# sourceMappingURL=main.css.map */

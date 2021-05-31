@@ -1,10 +1,8 @@
 .header__container {
-  @media screen and (min-width: 768px) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
   border-bottom: 1px solid #ececec;
   background-color: var(--white-bg-color);
 }
@@ -13,9 +11,6 @@
   @media screen and (min-width: 768px) {
     display: flex;
   }
-}
-
-.header__nav {
   @media screen and (max-width: 767px) {
     display: none;
   }
@@ -36,9 +31,6 @@
   @media screen and (max-width: 767px) {
     margin-bottom: 32px;
   }
-}
-
-.header-nav__item:not(:last-child) {
   @media screen and (min-width: 768px) {
     margin-right: 50px;
   }
