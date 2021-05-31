@@ -1260,6 +1260,12 @@ ul {
   top: 0;
 }
 
+@media screen and (max-width: 767px) {
+  .mob-menu.is-open {
+    display: none;
+  }
+}
+
 .header-nav-mob {
   display: flex;
   justify-content: space-between;

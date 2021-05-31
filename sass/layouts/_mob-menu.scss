@@ -6,6 +6,9 @@
   opacity: 1;
   display: block;
   top: 0;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 
 .header-nav-mob {
